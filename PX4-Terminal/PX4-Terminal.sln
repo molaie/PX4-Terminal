@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sha1-FP", "sha1-FP\sha1-FP.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{A00B5DFF-6822-42BB-92E8-DD01DCDA2306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPort", "Libs\SerialPort\SerialPort.csproj", "{0E7D2BAA-DBB4-41B1-B99B-5086DDC55D7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sha1.SerialUtilities", "Libs\SerialPort\sha1.SerialUtilities.csproj", "{0E7D2BAA-DBB4-41B1-B99B-5086DDC55D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
