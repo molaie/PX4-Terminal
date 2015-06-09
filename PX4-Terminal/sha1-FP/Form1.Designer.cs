@@ -27,14 +27,17 @@
 			this.btnConnect = new System.Windows.Forms.Button();
 			this.cmbPorts = new System.Windows.Forms.ComboBox();
 			this.btnClearLog = new System.Windows.Forms.Button();
+			this.txtCommand = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// txtLog
 			// 
 			this.txtLog.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.txtLog.Location = new System.Drawing.Point(0, 41);
+			this.txtLog.Location = new System.Drawing.Point(0, 123);
 			this.txtLog.Name = "txtLog";
-			this.txtLog.Size = new System.Drawing.Size(784, 337);
+			this.txtLog.ReadOnly = true;
+			this.txtLog.Size = new System.Drawing.Size(784, 255);
 			this.txtLog.TabIndex = 0;
 			this.txtLog.Text = "";
 			// 
@@ -66,11 +69,30 @@
 			this.btnClearLog.UseVisualStyleBackColor = true;
 			this.btnClearLog.Click += new System.EventHandler(this.btnClearLog_Click);
 			// 
+			// txtCommand
+			// 
+			this.txtCommand.Location = new System.Drawing.Point(0, 87);
+			this.txtCommand.Name = "txtCommand";
+			this.txtCommand.Size = new System.Drawing.Size(784, 20);
+			this.txtCommand.TabIndex = 4;
+			this.txtCommand.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 59);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(54, 13);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Command";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 378);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.txtCommand);
 			this.Controls.Add(this.btnClearLog);
 			this.Controls.Add(this.cmbPorts);
 			this.Controls.Add(this.btnConnect);
@@ -81,6 +103,7 @@
 			this.Name = "Form1";
 			this.Text = "PX4Terminal";
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -90,6 +113,8 @@
 		private System.Windows.Forms.Button btnConnect;
 		private System.Windows.Forms.ComboBox cmbPorts;
 		private System.Windows.Forms.Button btnClearLog;
+		private System.Windows.Forms.TextBox txtCommand;
+		private System.Windows.Forms.Label label1;
 	}
 }
 

@@ -8,7 +8,7 @@ using System.IO.Ports;
 namespace SHA1FP.SerialUtilities {
 	public class SerialUtilities {
 
-		public static IList<string> LoadPort() {
+		public static IList<string> LoadPorts() {
 			return SerialPort.GetPortNames().ToList();
 			
 		}
