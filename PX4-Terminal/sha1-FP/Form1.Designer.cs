@@ -25,7 +25,7 @@
 		private void InitializeComponent() {
 			this.txtLog = new System.Windows.Forms.RichTextBox();
 			this.btnConnect = new System.Windows.Forms.Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cmbPorts = new System.Windows.Forms.ComboBox();
 			this.btnClearLog = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -48,13 +48,13 @@
 			this.btnConnect.UseVisualStyleBackColor = true;
 			this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
 			// 
-			// comboBox1
+			// cmbPorts
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(22, 12);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(201, 21);
-			this.comboBox1.TabIndex = 2;
+			this.cmbPorts.FormattingEnabled = true;
+			this.cmbPorts.Location = new System.Drawing.Point(22, 12);
+			this.cmbPorts.Name = "cmbPorts";
+			this.cmbPorts.Size = new System.Drawing.Size(201, 21);
+			this.cmbPorts.TabIndex = 2;
 			// 
 			// btnClearLog
 			// 
@@ -72,7 +72,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 378);
 			this.Controls.Add(this.btnClearLog);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.cmbPorts);
 			this.Controls.Add(this.btnConnect);
 			this.Controls.Add(this.txtLog);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -88,7 +88,7 @@
 
 		private System.Windows.Forms.RichTextBox txtLog;
 		private System.Windows.Forms.Button btnConnect;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cmbPorts;
 		private System.Windows.Forms.Button btnClearLog;
 	}
 }

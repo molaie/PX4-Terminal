@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,31 +23,9 @@ namespace sha1_FP {
 			txtLog.Clear();
 		}
 
-
-
-
-
-
-
-
-
-
-
-
-		public new static string[] GetPortNames() {
-				string[] ports = null;
-
-				try {
-					ports = System.IO.Ports.SerialPort.GetPortNames()
-					.Select(p => p.TrimEnd())
-					
-					.ToArray();
-				} catch { }
-
-				return ports.ToArray();
-			}
+		public void FillPortsCombo() {
+			cmbPorts.DataSource = ports;
 		}
-
 
 	}
 }
