@@ -33,13 +33,16 @@
 			// 
 			// txtLog
 			// 
+			this.txtLog.BackColor = System.Drawing.Color.Black;
 			this.txtLog.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.txtLog.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLog.ForeColor = System.Drawing.Color.White;
 			this.txtLog.Location = new System.Drawing.Point(0, 123);
 			this.txtLog.Name = "txtLog";
-			this.txtLog.ReadOnly = true;
 			this.txtLog.Size = new System.Drawing.Size(784, 255);
 			this.txtLog.TabIndex = 0;
-			this.txtLog.Text = "";
+			this.txtLog.Text = "asdas";
+			this.txtLog.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLog_KeyDown);
 			// 
 			// btnConnect
 			// 

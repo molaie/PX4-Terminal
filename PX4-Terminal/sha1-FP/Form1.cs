@@ -13,6 +13,13 @@ using SHA1FP.SerialUtilities;
 namespace sha1_FP {
 	public partial class Form1 : Form {
 
+
+		List<string> cmdHistory = new List<string>();
+		int history = 0;
+		//save last position of caret, so user can go up & down in commands history
+		int inputStartPos = 0;
+
+
 		private SerialPortManager se = new SerialPortManager();
 
 		public Form1() {
@@ -21,6 +28,9 @@ namespace sha1_FP {
 		}
 
 		private void btnConnect_Click(object sender, EventArgs e) {
+			if (cmbPorts.Items.Count == 0) {
+				InsertLog("There is no comport to connect");
+			}
 			InsertLog(se.InitSerial(cmbPorts.SelectedItem.ToString(), handler: sePort_DataReceived));
 			se.WriteLine("");
 		}
@@ -35,17 +45,21 @@ namespace sha1_FP {
 
 
 		private void InsertLog(string log) {
-			if (this.txtLog.InvokeRequired) {
-				Invoke(new Action(() => txtLog.Text += log + Environment.NewLine));
-			} else {
-				if (log == null) {
-					log = "<NULL>";
-				}
-				if (log.Trim() == string.Empty) {
-					log = "<None>";
-				}
-				txtLog.Text += log + Environment.NewLine;
+			if (log == null) {
+				log = "<NULL>";
 			}
+			if (log.Trim() == string.Empty) {
+				log = "<None>";
+			}
+
+			log = log.TrimEnd('\r');
+			log = log.Replace("\0", "");
+			log = log.Replace((char)0x1b + "[K", "");
+			txtLog.Text += log + Environment.NewLine;
+			txtLog.SelectionStart = txtLog.Text.Length;
+			inputStartPos = txtLog.SelectionStart;
+
+			txtLog.InvokeIfRequired(c => txtLog.Text = log, null);
 		}
 
 
@@ -69,6 +83,36 @@ namespace sha1_FP {
 				//command = command.Replace("<ENTER>", "\r");
 				//command = command.Replace("<CTRL-Z>", "\u001a");
 				se.WriteLine(command);
+			}
+		}
+
+		private void txtLog_KeyDown(object sender, KeyEventArgs e) {
+			txtLog.SelectionStart = txtLog.Text.Length;
+			switch (e.KeyData) {
+				case Keys.Up:
+					if (history > 0) {
+						txtLog.Select(inputStartPos, txtLog.Text.Length - inputStartPos);
+						txtLog.SelectedText = "";
+						txtLog.AppendText(cmdHistory[--history]);
+					}
+					e.Handled = true;
+					break;
+				case Keys.Down:
+					if (history < cmdHistory.Count - 1) {
+						txtLog.Select(inputStartPos, txtLog.Text.Length - inputStartPos);
+						txtLog.SelectedText = "";
+						txtLog.AppendText(cmdHistory[++history]);
+					}
+					e.Handled = true;
+					break;
+				case Keys.Left:
+				case Keys.Back:
+					if (txtLog.SelectionStart <= inputStartPos)
+						e.Handled = true;
+					break;
+
+				//case Keys.Right:
+				//    break;
 			}
 		}
 
