@@ -62,25 +62,25 @@
 			this.mnu_newConsole.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thereIsNoComportToConnectToolStripMenuItem});
 			this.mnu_newConsole.Name = "mnu_newConsole";
-			this.mnu_newConsole.Size = new System.Drawing.Size(144, 22);
+			this.mnu_newConsole.Size = new System.Drawing.Size(152, 22);
 			this.mnu_newConsole.Text = "&New Console";
 			// 
 			// thereIsNoComportToConnectToolStripMenuItem
 			// 
 			this.thereIsNoComportToConnectToolStripMenuItem.Enabled = false;
 			this.thereIsNoComportToConnectToolStripMenuItem.Name = "thereIsNoComportToConnectToolStripMenuItem";
-			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.thereIsNoComportToConnectToolStripMenuItem.Text = "There is No comport to connect";
+			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.thereIsNoComportToConnectToolStripMenuItem.Text = "No Com Port";
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 

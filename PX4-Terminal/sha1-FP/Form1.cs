@@ -21,6 +21,9 @@ namespace sha1_FP {
 				newComMenu.Click += newComMenu_Click;
 				mnu_newConsole.DropDownItems.Add(newComMenu);
 			}
+			if (null != coms && coms.Count > 0) {
+				thereIsNoComportToConnectToolStripMenuItem.Visible = false;
+			}
 		}
 
 		void newComMenu_Click(object sender, EventArgs e) {
