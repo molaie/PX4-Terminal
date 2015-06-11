@@ -70,7 +70,7 @@
 			this.thereIsNoComportToConnectToolStripMenuItem.Enabled = false;
 			this.thereIsNoComportToConnectToolStripMenuItem.Name = "thereIsNoComportToConnectToolStripMenuItem";
 			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.thereIsNoComportToConnectToolStripMenuItem.Text = "No Com Port";
+			this.thereIsNoComportToConnectToolStripMenuItem.Text = "Connect one";
 			// 
 			// toolStripMenuItem1
 			// 
