@@ -156,5 +156,27 @@ namespace SHA1FP.UserControls {
 			}
 		}
 
+		private void mnu_theme_Click(object sender, EventArgs e) {
+			var mnuItem = (sender as ToolStripMenuItem);
+			mnuTheme.DropDownItems.Cast<ToolStripMenuItem>().Where(x => x.Checked).ToList().ForEach(x => x.Checked = false);
+			mnuItem.Checked = true;
+
+			var mnutext =  mnuItem.Text;
+
+			var mnucolor = mnutext.Substring(0, mnutext.IndexOf("on")).ToLower();
+			if (mnucolor.Contains("green")) {
+				txtTerminal.BackColor = Color.Black;
+				txtTerminal.ForeColor = Color.Green;
+			} else if (mnucolor.Contains("black")) {
+				txtTerminal.BackColor = Color.White;
+				txtTerminal.ForeColor = Color.Black;
+			} else if (mnucolor.Contains("white")) {
+				txtTerminal.BackColor = Color.Black;
+				txtTerminal.ForeColor = Color.White;
+			}
+
+		}
+
+		
 	}
 }
