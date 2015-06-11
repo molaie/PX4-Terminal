@@ -23,88 +23,105 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.txtLog = new System.Windows.Forms.RichTextBox();
-			this.btnConnect = new System.Windows.Forms.Button();
-			this.cmbPorts = new System.Windows.Forms.ComboBox();
-			this.btnClearLog = new System.Windows.Forms.Button();
-			this.txtCommand = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnu_newConsole = new System.Windows.Forms.ToolStripMenuItem();
+			this.thereIsNoComportToConnectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.terminal1 = new SHA1FP.UserControls.Terminal();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// txtLog
+			// menuStrip1
 			// 
-			this.txtLog.BackColor = System.Drawing.Color.Black;
-			this.txtLog.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.txtLog.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtLog.ForeColor = System.Drawing.Color.White;
-			this.txtLog.Location = new System.Drawing.Point(0, 123);
-			this.txtLog.Name = "txtLog";
-			this.txtLog.Size = new System.Drawing.Size(784, 255);
-			this.txtLog.TabIndex = 0;
-			this.txtLog.Text = "asdas";
-			this.txtLog.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLog_KeyDown);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+			this.menuStrip1.TabIndex = 6;
+			this.menuStrip1.Text = "menuStrip1";
 			// 
-			// btnConnect
+			// fileToolStripMenuItem
 			// 
-			this.btnConnect.Location = new System.Drawing.Point(249, 12);
-			this.btnConnect.Name = "btnConnect";
-			this.btnConnect.Size = new System.Drawing.Size(75, 23);
-			this.btnConnect.TabIndex = 1;
-			this.btnConnect.Text = "Connect";
-			this.btnConnect.UseVisualStyleBackColor = true;
-			this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_newConsole,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "&File";
 			// 
-			// cmbPorts
+			// mnu_newConsole
 			// 
-			this.cmbPorts.FormattingEnabled = true;
-			this.cmbPorts.Location = new System.Drawing.Point(22, 12);
-			this.cmbPorts.Name = "cmbPorts";
-			this.cmbPorts.Size = new System.Drawing.Size(201, 21);
-			this.cmbPorts.TabIndex = 2;
+			this.mnu_newConsole.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thereIsNoComportToConnectToolStripMenuItem});
+			this.mnu_newConsole.Name = "mnu_newConsole";
+			this.mnu_newConsole.Size = new System.Drawing.Size(144, 22);
+			this.mnu_newConsole.Text = "&New Console";
 			// 
-			// btnClearLog
+			// thereIsNoComportToConnectToolStripMenuItem
 			// 
-			this.btnClearLog.Location = new System.Drawing.Point(331, 12);
-			this.btnClearLog.Name = "btnClearLog";
-			this.btnClearLog.Size = new System.Drawing.Size(75, 23);
-			this.btnClearLog.TabIndex = 3;
-			this.btnClearLog.Text = "Clear Log";
-			this.btnClearLog.UseVisualStyleBackColor = true;
-			this.btnClearLog.Click += new System.EventHandler(this.btnClearLog_Click);
+			this.thereIsNoComportToConnectToolStripMenuItem.Enabled = false;
+			this.thereIsNoComportToConnectToolStripMenuItem.Name = "thereIsNoComportToConnectToolStripMenuItem";
+			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.thereIsNoComportToConnectToolStripMenuItem.Text = "There is No comport to connect";
 			// 
-			// txtCommand
+			// toolStripMenuItem1
 			// 
-			this.txtCommand.Location = new System.Drawing.Point(0, 87);
-			this.txtCommand.Name = "txtCommand";
-			this.txtCommand.Size = new System.Drawing.Size(784, 20);
-			this.txtCommand.TabIndex = 4;
-			this.txtCommand.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 6);
 			// 
-			// label1
+			// exitToolStripMenuItem
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 59);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(54, 13);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Command";
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
+			// editToolStripMenuItem
+			// 
+			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearLogToolStripMenuItem});
+			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+			this.editToolStripMenuItem.Text = "&Edit";
+			// 
+			// clearLogToolStripMenuItem
+			// 
+			this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
+			this.clearLogToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+			this.clearLogToolStripMenuItem.Text = "&Clear Log";
+			this.clearLogToolStripMenuItem.Click += new System.EventHandler(this.clearLogToolStripMenuItem_Click);
+			// 
+			// terminal1
+			// 
+			this.terminal1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.terminal1.Location = new System.Drawing.Point(0, 27);
+			this.terminal1.Name = "terminal1";
+			this.terminal1.SelectedComPort = null;
+			this.terminal1.Size = new System.Drawing.Size(784, 351);
+			this.terminal1.TabIndex = 7;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 378);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.txtCommand);
-			this.Controls.Add(this.btnClearLog);
-			this.Controls.Add(this.cmbPorts);
-			this.Controls.Add(this.btnConnect);
-			this.Controls.Add(this.txtLog);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Controls.Add(this.terminal1);
+			this.Controls.Add(this.menuStrip1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Form1";
 			this.Text = "PX4Terminal";
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -112,12 +129,15 @@
 
 		#endregion
 
-		private System.Windows.Forms.RichTextBox txtLog;
-		private System.Windows.Forms.Button btnConnect;
-		private System.Windows.Forms.ComboBox cmbPorts;
-		private System.Windows.Forms.Button btnClearLog;
-		private System.Windows.Forms.TextBox txtCommand;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnu_newConsole;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem thereIsNoComportToConnectToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem clearLogToolStripMenuItem;
+		private SHA1FP.UserControls.Terminal terminal1;
 	}
 }
 

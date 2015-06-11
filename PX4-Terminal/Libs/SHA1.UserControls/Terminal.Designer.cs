@@ -1,4 +1,4 @@
-﻿namespace SHA1.UserControls {
+﻿namespace SHA1FP.UserControls {
 	partial class Terminal {
 		/// <summary> 
 		/// Required designer variable.
@@ -30,16 +30,15 @@
 			// 
 			this.txtTerminal.BackColor = System.Drawing.Color.Black;
 			this.txtTerminal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtTerminal.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTerminal.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtTerminal.ForeColor = System.Drawing.Color.Lime;
 			this.txtTerminal.Location = new System.Drawing.Point(0, 0);
 			this.txtTerminal.Name = "txtTerminal";
-			this.txtTerminal.Size = new System.Drawing.Size(754, 432);
+			this.txtTerminal.Size = new System.Drawing.Size(356, 150);
 			this.txtTerminal.TabIndex = 0;
-			this.txtTerminal.Text = "ads";
+			this.txtTerminal.Text = "PX4 Terminal\nCopyright 2015 Ahmad molaie.\n";
 			this.txtTerminal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTerminal_KeyDown);
 			this.txtTerminal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTerminal_KeyPress);
-			this.txtTerminal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTerminal_KeyUp);
 			// 
 			// Terminal
 			// 
@@ -47,7 +46,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.txtTerminal);
 			this.Name = "Terminal";
-			this.Size = new System.Drawing.Size(754, 432);
+			this.Size = new System.Drawing.Size(356, 150);
 			this.ResumeLayout(false);
 
 		}

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sha1_FP {
+namespace SHA1FP {
 	//this copied from this page of stackoverflow
 	//http://stackoverflow.com/questions/3874134/cleaning-up-code-littered-with-invokerequired
 	public static class ControlHelpers {

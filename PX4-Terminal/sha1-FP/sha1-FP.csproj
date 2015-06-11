@@ -50,7 +50,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ControlHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -79,9 +78,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Libs\SerialPort\sha1.SerialUtilities.csproj">
-      <Project>{0e7d2baa-dbb4-41b1-b99b-5086ddc55d7e}</Project>
-      <Name>sha1.SerialUtilities</Name>
+    <ProjectReference Include="..\Libs\SHA1.UserControls\SHA1.UserControls.csproj">
+      <Project>{a2af2332-1884-49f3-b8b3-7202d263390f}</Project>
+      <Name>SHA1.UserControls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
