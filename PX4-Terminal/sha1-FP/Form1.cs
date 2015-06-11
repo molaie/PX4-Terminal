@@ -31,6 +31,7 @@ namespace sha1_FP {
 			selectedComPort = selectedCom.Text;
 			terminal1.SelectedComPort = selectedComPort;
 			terminal1.Connect();
+			terminal1.Enabled = true;
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {

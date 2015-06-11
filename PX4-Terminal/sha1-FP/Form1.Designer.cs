@@ -101,6 +101,7 @@
 			// terminal1
 			// 
 			this.terminal1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.terminal1.Enabled = false;
 			this.terminal1.Location = new System.Drawing.Point(0, 27);
 			this.terminal1.Name = "terminal1";
 			this.terminal1.SelectedComPort = null;
