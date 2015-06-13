@@ -55,6 +55,12 @@ namespace SHA1FP.SerialUtilities {
 			return sePort.ReadExisting();
 		}
 
+		public void close() {
+			if (sePort.IsOpen) {
+				sePort.Close();
+			}
+		}
+
 
 	}
 }

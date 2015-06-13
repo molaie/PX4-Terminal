@@ -65,6 +65,8 @@ namespace SHA1FP.UserControls {
 				txtTerminal.AppendText(log);
 				txtTerminal.SelectionStart = txtTerminal.Text.Length;
 				inputStartPos = txtTerminal.SelectionStart;
+				txtTerminal.ScrollToCaret();
+				txtTerminal.Focus();
 			}, null);
 		}
 
@@ -92,7 +94,7 @@ namespace SHA1FP.UserControls {
 
 
 
-		private void txtTerminal_KeyPress(object sender, KeyPressEventArgs e) {
+		private async void txtTerminal_KeyPress(object sender, KeyPressEventArgs e) {
 			if (e.KeyChar != '\r') {
 				return;
 			}
@@ -113,7 +115,10 @@ namespace SHA1FP.UserControls {
 				if (cmd == "cls") {
 					ClearLog();
 				} else if (cmd == "reboot") {
-
+					serialManager.WriteLine("reboot");
+					serialManager.close();
+					await RebootAndWait();
+					Connect();
 				} else {
 					serialManager.WriteLine(cmd);
 				}
@@ -121,6 +126,13 @@ namespace SHA1FP.UserControls {
 				//CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
 			}
 		}
+
+
+
+		private async Task RebootAndWait() {
+			await Task.Delay(12000);
+		}
+
 
 		private void txtTerminal_KeyDown(object sender, KeyEventArgs e) {
 			if (!isConnected) {
