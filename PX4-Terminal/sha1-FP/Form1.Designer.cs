@@ -33,6 +33,8 @@
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.terminal1 = new SHA1FP.UserControls.Terminal();
+			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -40,7 +42,8 @@
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -62,25 +65,25 @@
 			this.mnu_newConsole.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thereIsNoComportToConnectToolStripMenuItem});
 			this.mnu_newConsole.Name = "mnu_newConsole";
-			this.mnu_newConsole.Size = new System.Drawing.Size(152, 22);
+			this.mnu_newConsole.Size = new System.Drawing.Size(144, 22);
 			this.mnu_newConsole.Text = "&New Console";
 			// 
 			// thereIsNoComportToConnectToolStripMenuItem
 			// 
 			this.thereIsNoComportToConnectToolStripMenuItem.Enabled = false;
 			this.thereIsNoComportToConnectToolStripMenuItem.Name = "thereIsNoComportToConnectToolStripMenuItem";
-			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.thereIsNoComportToConnectToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.thereIsNoComportToConnectToolStripMenuItem.Text = "Connect one";
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -108,6 +111,20 @@
 			this.terminal1.SelectedComPort = null;
 			this.terminal1.Size = new System.Drawing.Size(784, 351);
 			this.terminal1.TabIndex = 7;
+			// 
+			// helpToolStripMenuItem
+			// 
+			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_about});
+			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+			this.helpToolStripMenuItem.Text = "Help";
+			// 
+			// mnu_about
+			// 
+			this.mnu_about.Name = "mnu_about";
+			this.mnu_about.Size = new System.Drawing.Size(152, 22);
+			this.mnu_about.Text = "About";
 			// 
 			// Form1
 			// 
@@ -141,6 +158,8 @@
 		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem clearLogToolStripMenuItem;
 		private SHA1FP.UserControls.Terminal terminal1;
+		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnu_about;
 	}
 }
 
