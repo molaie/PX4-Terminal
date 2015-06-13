@@ -117,7 +117,7 @@ namespace SHA1FP.UserControls {
 				} else if (cmd == "reboot") {
 					serialManager.WriteLine("reboot");
 					serialManager.close();
-					await RebootAndWait();
+					await WaitForBoot();
 					Connect();
 				} else {
 					serialManager.WriteLine(cmd);
@@ -129,7 +129,7 @@ namespace SHA1FP.UserControls {
 
 
 
-		private async Task RebootAndWait() {
+		private async Task WaitForBoot() {
 			await Task.Delay(12000);
 		}
 
