@@ -32,9 +32,9 @@
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.terminal1 = new SHA1FP.UserControls.Terminal();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
+			this.terminal1 = new SHA1FP.UserControls.Terminal();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -102,16 +102,6 @@
 			this.clearLogToolStripMenuItem.Text = "&Clear Log";
 			this.clearLogToolStripMenuItem.Click += new System.EventHandler(this.clearLogToolStripMenuItem_Click);
 			// 
-			// terminal1
-			// 
-			this.terminal1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.terminal1.Enabled = false;
-			this.terminal1.Location = new System.Drawing.Point(0, 27);
-			this.terminal1.Name = "terminal1";
-			this.terminal1.SelectedComPort = null;
-			this.terminal1.Size = new System.Drawing.Size(784, 351);
-			this.terminal1.TabIndex = 7;
-			// 
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,6 +115,17 @@
 			this.mnu_about.Name = "mnu_about";
 			this.mnu_about.Size = new System.Drawing.Size(152, 22);
 			this.mnu_about.Text = "About";
+			this.mnu_about.Click += new System.EventHandler(this.mnu_about_Click);
+			// 
+			// terminal1
+			// 
+			this.terminal1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.terminal1.Enabled = false;
+			this.terminal1.Location = new System.Drawing.Point(0, 27);
+			this.terminal1.Name = "terminal1";
+			this.terminal1.SelectedComPort = null;
+			this.terminal1.Size = new System.Drawing.Size(784, 351);
+			this.terminal1.TabIndex = 7;
 			// 
 			// Form1
 			// 

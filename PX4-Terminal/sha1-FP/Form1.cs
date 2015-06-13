@@ -45,6 +45,11 @@ namespace sha1_FP {
 			terminal1.ClearLog();
 		}
 
+		private void mnu_about_Click(object sender, EventArgs e) {
+			frmAbout f = new frmAbout();
+			f.ShowDialog();
+		}
+
 
 
 	}
