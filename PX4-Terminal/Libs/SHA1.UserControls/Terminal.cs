@@ -65,7 +65,6 @@ namespace SHA1FP.UserControls {
 				txtTerminal.AppendText(log);
 				txtTerminal.SelectionStart = txtTerminal.Text.Length;
 				inputStartPos = txtTerminal.SelectionStart;
-				txtTerminal.ScrollToCaret();
 				txtTerminal.Focus();
 			}, null);
 		}
@@ -102,7 +101,7 @@ namespace SHA1FP.UserControls {
 				return;
 			}
 			try {
-				string cmd = "";
+				var cmd = string.Empty;
 
 				cmd = txtTerminal.Text.Substring(inputStartPos, txtTerminal.Text.Length - inputStartPos - 1).ToLower();
 				txtTerminal.Select(inputStartPos, txtTerminal.Text.Length - inputStartPos);
@@ -123,7 +122,6 @@ namespace SHA1FP.UserControls {
 					serialManager.WriteLine(cmd);
 				}
 			} catch {
-				//CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
 			}
 		}
 
